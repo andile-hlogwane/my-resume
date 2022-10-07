@@ -1,3 +1,10 @@
+@mixin media-tablet {
+    @media screen and (max-width: break-point(tablet)) {
+        @content;
+    }
+}
+
+@import "variables";
 @import "resets";
 @import "utilities";
 @import "header";

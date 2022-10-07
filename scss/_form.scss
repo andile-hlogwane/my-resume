@@ -33,4 +33,8 @@
         border-radius: 10px;
     }
 
+    @include media-tablet {
+        grid-column: 3 / span 2;
+    }
+
 }

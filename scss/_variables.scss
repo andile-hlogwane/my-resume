@@ -1,0 +1,8 @@
+$break-points: (
+    "small": 450px,
+    "tablet": 900px,
+);
+
+@function break-point($break) {
+    @return map-get($break-points, $break);
+}

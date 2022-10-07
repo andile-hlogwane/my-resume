@@ -43,7 +43,7 @@ h2 {
   justify-content: space-between;
 }
 .header.open .header__menu--line {
-  background-attachment: trasparent;
+  background-color: transparent;
 }
 .header.open .header__menu--line::before {
   transform: rotate(45deg);
@@ -58,6 +58,7 @@ h2 {
   width: 100%;
   height: 100vh;
   position: fixed;
+  background-color: purple;
   opacity: 0;
   display: none;
   z-index: 10;
@@ -99,6 +100,7 @@ h2 {
 .header__nav .nav__list__item a:visited::after {
   content: attr(data-text);
   position: absolute;
+  background-color: lightblue;
   left: 0;
   bottom: -100%;
   transform: rotateX(-90deg);
@@ -114,6 +116,90 @@ h2 {
 }
 .header .txt-type {
   border-right: 0.2rem solid gold;
+}
+@media screen and (max-width: 900px) {
+  .header__nav {
+    background-color: darkblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    height: 100vh;
+    line-height: initial;
+    flex-direction: column;
+    text-align: center;
+    z-index: 20;
+    transform: perspective(70rem) rotateY(0.5turn);
+    transform-origin: top left;
+    transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .header__nav__list {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-evenly;
+  }
+  .header__nav__list .nav__list__item {
+    -webkit-animation: initial;
+            animation: initial;
+  }
+  .header__nav__list .nav__list__item a:link,
+.header__nav__list .nav__list__item a:active {
+    transform-origin: left;
+    margin-right: initial;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+  .header__nav__list .nav__list__item a:hover,
+.header__nav__list .nav__list__item a:active {
+    transform: rotateY(90deg);
+  }
+  .header__nav__list .nav__list__item a:link::after,
+.header__nav__list .nav__list__item a:visited::after {
+    top: 0;
+    bottom: 100%;
+    left: 100;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transform: rotateY(-90deg);
+  }
+  .header.open nav {
+    transform: rotateY(0);
+  }
+  .header__menu {
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 2.5rem;
+    z-index: 20;
+    cursor: pointer;
+  }
+  .header__menu--line, .header__menu--line::before, .header__menu--line::after {
+    content: "";
+    position: absolute;
+    width: 2.5rem;
+    height: 0.2rem;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.5s ease-in-out;
+  }
+  .header__menu--line::before {
+    top: -2.2rem;
+  }
+  .header__menu--line::after {
+    top: 1.3rem;
+  }
+  .header__overlay.open {
+    display: block;
+    opacity: 0.8;
+  }
 }
 
 #about {
@@ -135,6 +221,15 @@ h2 {
   font-size: 20px;
   font-weight: 600;
   line-height: 2;
+}
+@media screen and (max-width: 900px) {
+  #about__profile-container-img {
+    margin: auto;
+  }
+  #about__more-info {
+    clear: both;
+    padding: 1rem;
+  }
 }
 
 .programming-langueges {
@@ -315,6 +410,12 @@ h2 {
     width: 75%;
   }
 }
+@media screen and (max-width: 900px) {
+  .programming-langueges {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
 
 #contact {
   grid-column: 5/span 4;
@@ -346,6 +447,11 @@ h2 {
   margin: 1rem;
   width: 100%;
   border-radius: 10px;
+}
+@media screen and (max-width: 900px) {
+  #contact {
+    grid-column: 3/span 2;
+  }
 }
 
 .certificates {
@@ -410,6 +516,18 @@ h2 {
 .certificates__card:hover .certificates__card--back {
   transform: perspective(100rem) rotateY(1turn);
 }
+@media screen and (max-width: 900px) {
+  .certificates {
+    grid-column-start: 2/span 2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .certificates__title {
+    align-self: center;
+  }
+}
 
 .footer {
   display: grid;
@@ -420,7 +538,7 @@ h2 {
 }
 .footer__para {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .footer__socials--link {
   font-size: 25px;

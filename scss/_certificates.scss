@@ -74,4 +74,18 @@
             transform: perspective(100rem) rotateY(1turn);
         }
     }
+
+    @include media-tablet {
+        grid-column-start: 2 / span 2;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+
+
+        &__title {
+            align-self: center;
+        }
+    }
 }

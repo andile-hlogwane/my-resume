@@ -27,4 +27,20 @@
         line-height: 2;
 
     }
+
+    @include media-tablet {
+        &__profile-container {
+            &-img {
+                margin: auto;
+
+            }
+
+
+        }
+
+        &__more-info {
+            clear: both;
+            padding: 1rem;
+        }
+    }
 }

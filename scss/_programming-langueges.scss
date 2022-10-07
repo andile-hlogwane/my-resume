@@ -137,4 +137,9 @@
             width: 75%;
         }
     }
+
+    @include media-tablet {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
 }

@@ -7,7 +7,7 @@
     justify-content: space-between;
 
     &.open .header__menu--line {
-        background-attachment: trasparent;
+        background-color: transparent;
     }
 
     &.open .header__menu--line::before {
@@ -27,7 +27,7 @@
         width: 100%;
         height: 100vh;
         position: fixed;
-        //background-color:
+        background-color: purple;
         opacity: 0;
         display: none;
         z-index: 10;
@@ -77,7 +77,7 @@
             a:visited::after {
                 content: attr(data-text);
                 position: absolute;
-                //background-color: lightblue;
+                background-color: lightblue;
                 left: 0;
                 bottom: -100%;
                 transform: rotateX(-90deg);
@@ -101,5 +101,106 @@
 
     .txt-type {
         border-right: 0.2rem solid gold;
+    }
+
+    @include media-tablet {
+        &__nav {
+            background-color: darkblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 25rem;
+            height: 100vh;
+            line-height: initial;
+            flex-direction: column;
+            text-align: center;
+            z-index: 20;
+            transform: perspective(70rem) rotateY(0.5turn);
+            transform-origin: top left;
+            transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                height: 70%;
+                justify-content: space-evenly;
+
+                .nav__list__item {
+                    animation: initial;
+
+                    a:link,
+                    a:active {
+                        transform-origin: left;
+                        margin-right: initial;
+                        padding: 2rem;
+                        font-size: 1.2rem;
+                    }
+
+                    a:hover,
+                    a:active {
+                        transform: rotateY(90deg);
+                    }
+
+                    a:link::after,
+                    a:visited::after {
+                        top: 0;
+                        bottom: 100%;
+                        left: 100;
+                        width: 100%;
+                        height: 100%;
+                        transform-origin: left;
+                        transform: rotateY(-90deg);
+
+                    }
+                }
+            }
+        }
+
+        &.open nav {
+            transform: rotateY(0);
+        }
+
+        &__menu {
+            height: 4rem;
+            width: 4rem;
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            padding: 2.5rem;
+            z-index: 20;
+            cursor: pointer;
+
+            &--line,
+            &--line::before,
+            &--line::after {
+                content: "";
+                position: absolute;
+                width: 2.5rem;
+                height: 0.2rem;
+                background-color: #fff;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &--line::before {
+                top: -2.2rem;
+
+            }
+
+            &--line::after {
+                top: 1.3rem;
+            }
+
+
+        }
+
+        &__overlay.open {
+            display: block;
+            opacity: 0.8;
+        }
     }
 }
