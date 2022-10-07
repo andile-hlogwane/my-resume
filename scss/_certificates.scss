@@ -1,0 +1,77 @@
+.certificates {
+    grid-column: 1 / span 12;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 28rem);
+    grid-gap: 2rem;
+
+    &__title {
+        grid-column: 1 / span 3;
+        justify-self: center;
+
+    }
+
+    &__card {
+        display: grid;
+        width: 28rem;
+        height: 28rem;
+        position: relative;
+
+
+
+        &--front,
+        &--back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: grid;
+            width: 100%;
+            height: 100%;
+            border: 2px solid red;
+            background-color: burlywood;
+            background-repeat: no repeat;
+            background-size: cover;
+            background-position: center;
+            backface-visibility: hidden;
+            transition: all 2s ease-in-out;
+            transform: perspective(100rem);
+        }
+
+        &--front h2 {
+            justify-self: center;
+            align-self: center;
+            font-size: 20px;
+            font-weight: 400;
+
+
+        }
+
+        &:nth-child(2) &--back {
+            background-image: url("../images/background-images/s+certificate.png");
+            transform: perspective(100rem) rotateY(0.5turn);
+        }
+
+        &:nth-child(3) &--back {
+            background-image: url("../images/background-images/pentest+.png");
+            transform: perspective(100rem) rotateY(0.5turn);
+        }
+
+        &:nth-child(4) &--back {
+            background-image: url("../images/background-images/linux.jpeg");
+            transform: perspective(100rem) rotateY(0.5turn);
+        }
+
+        &:nth-child(5) &--back {
+            background-image: url("../images/background-images/itil.jpeg");
+            transform: perspective(100rem) rotateY(0.5turn);
+        }
+
+        &:hover &--front {
+            transform: perspective(100rem) rotateY(0.5turn);
+        }
+
+        &:hover &--back {
+            transform: perspective(100rem) rotateY(1turn);
+        }
+    }
+}

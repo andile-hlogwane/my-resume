@@ -1,0 +1,140 @@
+.programming-langueges {
+    clear: both;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: #e4f9f5;
+    row-gap: 5px;
+    padding: 15px;
+
+    &__heading {
+        grid-column: 1 / span 12;
+        justify-self: center;
+    }
+
+    .languege {
+        grid-column: 1 / span 12;
+    }
+
+    .top {
+        grid-column: 1 / span 12;
+        height: 20px;
+        width: 100%;
+        background-color: #ccc;
+        border: 1px solid #000;
+
+
+        &__inside--1 {
+            animation: language-1 4s infinite cubic-bezier(1, 0, 0, 1);
+            background-color: aquamarine;
+            height: 55%;
+            margin: 5px;
+            border-radius: 10px;
+            animation-fill-mode: forwards;
+        }
+
+        &__inside--2 {
+            animation: language-2 4s infinite cubic-bezier(1, 0, 0, 1);
+            background-color: aquamarine;
+            height: 55%;
+            margin: 5px;
+            border-radius: 10px;
+            animation-fill-mode: forwards;
+        }
+
+        &__inside--3 {
+            animation: language-3 4s infinite cubic-bezier(1, 0, 0, 1);
+            background-color: aquamarine;
+            height: 55%;
+            margin: 5px;
+            border-radius: 10px;
+            animation-fill-mode: forwards;
+        }
+
+        &__inside--4 {
+            animation: language-4 4s infinite cubic-bezier(1, 0, 0, 1);
+            background-color: aquamarine;
+            height: 55%;
+            margin: 5px;
+            border-radius: 10px;
+            animation-fill-mode: forwards;
+        }
+
+        &__inside--5 {
+            animation: language-5 4s infinite cubic-bezier(1, 0, 0, 1);
+            background-color: aquamarine;
+            height: 55%;
+            margin: 5px;
+            border-radius: 10px;
+            animation-fill-mode: forwards;
+        }
+
+        &__inside--6 {
+            animation: language-6 4s infinite cubic-bezier(1, 0, 0, 1);
+            background-color: aquamarine;
+            height: 55%;
+            margin: 5px;
+            border-radius: 10px;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    @keyframes language-1 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 85%;
+        }
+    }
+
+    @keyframes language-2 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 75%;
+        }
+    }
+
+    @keyframes language-3 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 75%;
+        }
+    }
+
+    @keyframes language-4 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 80%;
+        }
+    }
+
+    @keyframes language-5 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 75%;
+        }
+    }
+
+    @keyframes language-6 {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 75%;
+        }
+    }
+}

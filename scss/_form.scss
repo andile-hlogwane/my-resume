@@ -1,0 +1,36 @@
+#contact {
+    grid-column: 5 / span 4;
+
+    &__title {
+        text-align: center;
+    }
+
+    input {
+        display: block;
+        margin: 1rem;
+        width: 100%;
+        height: 1.3rem;
+        border: 1px solid transparent;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .message {
+        display: inline-block;
+        margin: 1rem;
+        width: 100%;
+    }
+
+    .mail-button {
+        display: block;
+        color: blue;
+        background-color: #ccc;
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        margin: 1rem;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+}

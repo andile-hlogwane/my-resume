@@ -1,0 +1,55 @@
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: purple;
+    padding: 3vh 2vw;
+    place-items: center;
+
+    &__para {
+        color: #fff;
+        font-size: 1.3rem;
+
+    }
+
+    &__socials--link {
+        font-size: 25px;
+        display: inline-block;
+        border-radius: 4rem;
+        margin-right: 1rem;
+        box-shadow: 0.5rem 0.5rem 2rem 1rem gold,
+            -0.5rem -0.5rem 2rem 1rem gold;
+        transform: scale(0.8);
+        animation: socials 3s linear infinite;
+    }
+
+    &__socials--link:nth-child(1) {
+        animation-delay: 0;
+    }
+
+    &__socials--link:nth-child(2) {
+        animation-delay: 0.3s
+    }
+
+    &__socials--link:nth-child(3) {
+        animation-delay: 0.6s
+    }
+
+    &__socials--link:nth-child(4) {
+        animation-delay: 0.9s;
+    }
+}
+
+@keyframes socials {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2)
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andile-hlogwane/myPortfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andile-hlogwane/myPortfolio/issues"
+  },
+  "homepage": "https://github.com/andile-hlogwane/myPortfolio#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
